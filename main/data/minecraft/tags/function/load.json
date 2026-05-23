@@ -1,4 +1,4 @@
 {
     "replace": false,
-    "values": ["game:load"]
+    "values": ["game:init/_init"]
 }
