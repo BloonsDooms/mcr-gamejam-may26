@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "description": "Main datapack for the MCR Game Jam, May 2026",
+    "min_format": [
+      101,
+      1
+    ],
+    "max_format": 101
+  }
+}
