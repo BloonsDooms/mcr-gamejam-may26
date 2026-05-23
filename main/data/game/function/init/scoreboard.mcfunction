@@ -8,7 +8,6 @@
 
 
 
-
 ## ID
 
 # player ID, assigned to players and linked objects.
@@ -19,6 +18,17 @@ scoreboard players reset * player.id
 scoreboard objectives add object.id dummy
 scoreboard players reset * object.id
 
+scoreboard objectives add parent.id dummy
+scoreboard players reset * parent.id
+
 # relog detection. This is also reset, because on /reload everyone gets IDs reassigned anyway.
+# clearly, this doesn't work in singleplayer.
 scoreboard objectives add player.rejoin minecraft.custom:leave_game
 scoreboard players reset * player.rejoin
+
+#timers
+scoreboard objectives add t1 dummy
+scoreboard objectives add t2 dummy
+scoreboard objectives add t3 dummy
+scoreboard objectives add t4 dummy
+scoreboard objectives add t5 dummy
