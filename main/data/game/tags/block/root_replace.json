@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:air",
+    "minecraft:oak_button",
+    "minecraft:pale_oak_button"
+  ]
+}

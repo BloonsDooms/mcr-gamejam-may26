@@ -1,0 +1,5 @@
+fill ~ ~ ~-1 ~ ~ ~-1 minecraft:pale_oak_button[facing=north] replace minecraft:oak_button[facing=north]
+fill ~ ~ ~1 ~ ~ ~1 minecraft:pale_oak_button[facing=south] replace minecraft:oak_button[facing=south]
+fill ~1 ~ ~ ~1 ~ ~ minecraft:pale_oak_button[facing=east] replace minecraft:oak_button[facing=east]
+fill ~-1 ~ ~ ~-1 ~ ~ minecraft:pale_oak_button[facing=west] replace minecraft:oak_button[facing=west]
+fill ~ ~1 ~ ~ ~1 ~ minecraft:pale_oak_button[face=floor] replace minecraft:oak_button[face=floor]
