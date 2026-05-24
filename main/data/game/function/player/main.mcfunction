@@ -31,6 +31,9 @@ scoreboard players set @s[tag=switch,scores={equip_item=2}] equip_time_max 5
 scoreboard players set @s[tag=switch,scores={equip_item=4}] equip_time 20
 scoreboard players set @s[tag=switch,scores={equip_item=4}] equip_time_max 20
 
+scoreboard players set @s[tag=switch,scores={equip_item=6}] equip_time 0
+scoreboard players set @s[tag=switch,scores={equip_item=6}] equip_time_max 0
+
 #blaster
 execute unless items entity @s weapon.mainhand *[damage=120] run item replace entity @s[scores={equip_item=2,equip_time=..0}] inventory.8 with minecraft:arrow
 execute unless entity @s[scores={equip_item=2,equip_time=..0}] run item replace entity @s inventory.8 with minecraft:stone
