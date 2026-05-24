@@ -14,7 +14,9 @@ execute as @e[type=frog] at @s run function game:objects/dome/place_dome_spawner
 execute as @e[type=text_display,tag=dome_spawner] at @s run function game:objects/dome/dome_spawner
 execute as @e[type=marker,tag=door] at @s rotated as @s run function game:objects/doors/door_tick
 
+execute if score .run_game .calc matches 1 run function game:enemy/mold/main
 
+execute as @e[type=zombie] at @s run function game:enemy/zombie/main
 
 # get entities matching player.id
 #scoreboard players operation #temp player.id = @s player.id

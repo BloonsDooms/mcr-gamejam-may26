@@ -16,4 +16,5 @@ execute at @n[tag=init,tag=door] run summon item_display ~ ~ ~ {Tags:["door_righ
 execute rotated as @n[tag=init,tag=door] run rotate @n[tag=door_left] ~ ~
 execute rotated as @n[tag=init,tag=door] run rotate @n[tag=door_right] ~ ~
 
+execute at @n[tag=init,tag=door] run fill ^-1 ^ ^ ^1 ^3 ^ yellow_stained_glass_pane
 tag @e remove init

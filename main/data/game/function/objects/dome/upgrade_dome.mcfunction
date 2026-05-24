@@ -12,10 +12,8 @@ tag @n[tag=this,tag=level1,tag=level0] remove level0
 
 
 execute as @n[tag=this,tag=drill] at @s run function game:objects/dome/change_dome_to_drill
-execute as @n[tag=this,tag=lab] at @s run function game:objects/dome/change_dome_to_drill
-execute as @n[tag=this,tag=greenhouse] at @s run function game:objects/dome/change_dome_to_drill
+execute as @n[tag=this,tag=lab] at @s run function game:objects/dome/change_dome_to_lab
+execute as @n[tag=this,tag=greenhouse] at @s run function game:objects/dome/change_dome_to_greenhouse
 execute as @n[tag=this,tag=!drill,tag=!lab,tag=!greenhouse] at @s run function game:objects/dome/change_dome_to_empty
 
 tag @n remove this
-
-execute at @n[tag=dome,distance=..20] run function game:objects/dome/connect_neighboring_domes

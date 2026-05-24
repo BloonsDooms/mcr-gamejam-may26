@@ -162,7 +162,9 @@ execute as @e[tag=target,tag=level3] at @s facing entity @n[tag=this,tag=level3]
 execute as @e[tag=target] at @s facing entity @n[tag=this] feet run fill ^-2 ^ ^13 ^2 ^5 ^13 polished_blackstone
 execute as @e[tag=target] at @s facing entity @n[tag=this] feet run fill ^-1 ^1 ^13 ^1 ^4 ^13 air
 # this is actually done elsewhere
-#execute as @e[tag=target] at @s facing entity @n[tag=this] feet positioned ^ ^1 ^13 run function game:objects/doors/new_door
+execute as @e[tag=target] at @s facing entity @n[tag=this] feet positioned ^ ^1 ^13 unless entity @n[tag=door_hookpoint,distance=..2] run summon marker ~ ~ ~ {Tags:["door_hookpoint","level0"]}
+execute as @e[tag=target] at @s facing entity @n[tag=this] feet positioned ^ ^1 ^13 run rotate @n[tag=door_hookpoint,distance=..2] ~ ~
+#function game:objects/doors/new_door
 
 tag @e remove this
 tag @e remove target
