@@ -3,7 +3,7 @@
 # always aligned on a grid, which the center of each dome is aligned upon.
 # each dome takes up a 27^2 block area, regardless of the size.
 
-summon marker ~13.5 64 ~13.5 {Tags:["init","dome","level0"]}
+summon marker ~13.5 64 ~13.5 {Tags:["init","upgradeable","dome","level0"]}
 
 execute as @e[tag=dome,tag=init,limit=1] store result score @s dome.x run data get entity @s Pos[0] 0.0384615384615
 execute as @e[tag=dome,tag=init,limit=1] store result score @s dome.z run data get entity @s Pos[2] 0.0384615384615
