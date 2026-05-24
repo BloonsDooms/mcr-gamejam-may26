@@ -5,11 +5,11 @@
 
 summon marker ~13.5 64 ~13.5 {Tags:["init","dome","level0"]}
 
-execute as @e[tag=dome,tag=init,limit=1] store result score @s dome.x run data get entity @s Pos[0] 0.037037037037
-execute as @e[tag=dome,tag=init,limit=1] store result score @s dome.z run data get entity @s Pos[2] 0.037037037037
+execute as @e[tag=dome,tag=init,limit=1] store result score @s dome.x run data get entity @s Pos[0] 0.0384615384615
+execute as @e[tag=dome,tag=init,limit=1] store result score @s dome.z run data get entity @s Pos[2] 0.0384615384615
 
-execute store result entity @e[tag=dome,tag=init,limit=1] Pos[0] double 27 run scoreboard players get @e[tag=dome,tag=init,limit=1] dome.x
-execute store result entity @e[tag=dome,tag=init,limit=1] Pos[2] double 27 run scoreboard players get @e[tag=dome,tag=init,limit=1] dome.z
+execute store result entity @e[tag=dome,tag=init,limit=1] Pos[0] double 26 run scoreboard players get @e[tag=dome,tag=init,limit=1] dome.x
+execute store result entity @e[tag=dome,tag=init,limit=1] Pos[2] double 26 run scoreboard players get @e[tag=dome,tag=init,limit=1] dome.z
 
 execute as @e[tag=dome,tag=init,limit=1] at @s align xyz run tp @s ~.5 ~.5 ~.5
 
@@ -19,5 +19,7 @@ execute at @e[tag=dome,tag=init,limit=1] run fill ~-8 ~ ~-8 ~8 ~ ~8 stone replac
 
 execute at @e[tag=dome,tag=init,limit=1] run particle explosion_emitter ~ ~3 ~ 0 0 0 1 1 force @a
 
+
+function game:objects/dome/connect_neighboring_domes
 
 tag @e remove init

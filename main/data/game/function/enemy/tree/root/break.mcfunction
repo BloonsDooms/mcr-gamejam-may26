@@ -10,5 +10,7 @@ execute as @e[tag=tree] if score @s object.id = @n[tag=me] parent.id run scorebo
 
 function game:enemy/tree/root/break2
 
+playsound minecraft:item.wolf_armor.damage master @a ~ ~ ~ 0.8 0.7
+
 #
 tag @s remove me

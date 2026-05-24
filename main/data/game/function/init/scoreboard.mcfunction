@@ -50,7 +50,11 @@ scoreboard objectives add equip_time dummy
 scoreboard objectives add equip_time_max dummy
 scoreboard objectives add equip_item dummy
 scoreboard objectives add action_timer dummy
+scoreboard objectives add action_timer_max dummy
 scoreboard objectives add action_cooldown dummy
+scoreboard objectives add action_cooldown_max dummy
+
+scoreboard objectives add damage_temp dummy
 
 scoreboard objectives add hotbar dummy
 scoreboard objectives add hotbar_t dummy

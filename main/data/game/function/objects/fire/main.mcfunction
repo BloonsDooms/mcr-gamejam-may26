@@ -4,5 +4,13 @@ execute as @s[scores={t2=1}] run particle minecraft:flame ~ ~ ~ 0.1 0.1 0.1 0.1 
 
 scoreboard players set @s[scores={t2=3..}] t2 0
 
-execute as @s[scores={t1=35..}] run fill ~-0.5 ~-0.5 ~-0.5 ~0.5 ~0.5 ~0.5 air replace glow_lichen
+execute as @s[scores={t1=35..}] at @s positioned ~-0.5 ~-0.5 ~-0.5 if block ~ ~ ~ #game:fire_break run setblock ~ ~ ~ air destroy
+execute as @s[scores={t1=35..}] at @s positioned ~0.5 ~0.5 ~0.5 if block ~ ~ ~ #game:fire_break run setblock ~ ~ ~ air destroy
+execute as @s[scores={t1=35..}] at @s positioned ~0.5 ~0.5 ~-0.5 if block ~ ~ ~ #game:fire_break run setblock ~ ~ ~ air destroy
+execute as @s[scores={t1=35..}] at @s positioned ~-0.5 ~0.5 ~0.5 if block ~ ~ ~ #game:fire_break run setblock ~ ~ ~ air destroy
+execute as @s[scores={t1=35..}] at @s positioned ~0.5 ~-0.5 ~0.5 if block ~ ~ ~ #game:fire_break run setblock ~ ~ ~ air destroy
+execute as @s[scores={t1=35..}] at @s positioned ~0.5 ~-0.5 ~-0.5 if block ~ ~ ~ #game:fire_break run setblock ~ ~ ~ air destroy
+execute as @s[scores={t1=35..}] at @s positioned ~-0.5 ~0.5 ~-0.5 if block ~ ~ ~ #game:fire_break run setblock ~ ~ ~ air destroy
+execute as @s[scores={t1=35..}] at @s positioned ~-0.5 ~-0.5 ~0.5 if block ~ ~ ~ #game:fire_break run setblock ~ ~ ~ air destroy
+
 kill @s[scores={t1=35..}]

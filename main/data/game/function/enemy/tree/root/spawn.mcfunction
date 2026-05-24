@@ -33,15 +33,15 @@ execute as @n[tag=root,tag=new] at @s run setblock ~ ~ ~ oak_wood
 #thorns
 execute if entity @n[tag=me,tag=thorns] run tag @n[tag=root,tag=new] add thorns
 execute store result score .rand .calc run random value 0..1
-execute if score .rand .calc matches 1 run execute at @n[tag=root,tag=new,tag=thorns] run fill ~ ~ ~-1 ~ ~ ~-1 minecraft:oak_button[facing=north] replace air
+execute if score .rand .calc matches 1 run execute at @n[tag=root,tag=new,tag=thorns] run fill ~ ~ ~-1 ~ ~ ~-1 minecraft:oak_button[facing=north,powered=true] replace air
 execute store result score .rand .calc run random value 0..1
-execute if score .rand .calc matches 1 run execute at @n[tag=root,tag=new,tag=thorns] run fill ~ ~ ~1 ~ ~ ~1 minecraft:oak_button[facing=south] replace air
+execute if score .rand .calc matches 1 run execute at @n[tag=root,tag=new,tag=thorns] run fill ~ ~ ~1 ~ ~ ~1 minecraft:oak_button[facing=south,powered=true] replace air
 execute store result score .rand .calc run random value 0..1
-execute if score .rand .calc matches 1 run execute at @n[tag=root,tag=new,tag=thorns] run fill ~1 ~ ~ ~1 ~ ~ minecraft:oak_button[facing=east] replace air
+execute if score .rand .calc matches 1 run execute at @n[tag=root,tag=new,tag=thorns] run fill ~1 ~ ~ ~1 ~ ~ minecraft:oak_button[facing=east,powered=true] replace air
 execute store result score .rand .calc run random value 0..1
-execute if score .rand .calc matches 1 run execute at @n[tag=root,tag=new,tag=thorns] run fill ~-1 ~ ~ ~-1 ~ ~ minecraft:oak_button[facing=west] replace air
+execute if score .rand .calc matches 1 run execute at @n[tag=root,tag=new,tag=thorns] run fill ~-1 ~ ~ ~-1 ~ ~ minecraft:oak_button[facing=west,powered=true] replace air
 execute store result score .rand .calc run random value 0..1
-execute if score .rand .calc matches 1 run execute at @n[tag=root,tag=new,tag=thorns] run fill ~ ~1 ~ ~ ~1 ~ minecraft:oak_button[face=floor] replace air
+execute if score .rand .calc matches 1 run execute at @n[tag=root,tag=new,tag=thorns] run fill ~ ~1 ~ ~ ~1 ~ minecraft:oak_button[face=floor,powered=true] replace air
 execute store result score .rand .calc run random value 0..3
 execute if score .rand .calc matches 1 run execute at @n[tag=root,tag=new,tag=spores] run fill ~ ~1 ~ ~ ~1 ~ minecraft:moss_carpet replace #game:root_replace
 
