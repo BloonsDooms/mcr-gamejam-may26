@@ -1,0 +1,1 @@
+give @s crossbow[item_name=[{"text":"Blaster (Right-Click)"}],enchantments={"quick_charge":2},enchantment_glint_override=false,max_damage=120,damage=10]

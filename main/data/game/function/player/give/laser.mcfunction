@@ -1,0 +1,1 @@
+give @s carrot_on_a_stick[item_model="carrot",custom_data={laser:1b},item_name={"italic":false,"text":"Laser"},attribute_modifiers=[{id:"attack_speed",type:"attack_speed",amount:100,operation:"add_value"}]] 1
