@@ -9,13 +9,14 @@ scoreboard players set @s[tag=switch] action_timer 0
 scoreboard players set @s[tag=switch] equip_time 999
 
 # detect held item
-# 1-laser 2-blaster 3-slicer 4-bomber 5-hose
+# 1-laser 2-blaster 3-slicer 4-bomber 5-hose 6-upgrader
 scoreboard players set @s equip_item 0
 execute if items entity @s weapon.mainhand minecraft:carrot_on_a_stick[custom_data={laser:1b}] run scoreboard players set @s equip_item 1
 execute if items entity @s weapon.mainhand minecraft:crossbow run scoreboard players set @s equip_item 2
 execute if items entity @s weapon.mainhand minecraft:carrot_on_a_stick[custom_data={slicer:1b}] run scoreboard players set @s equip_item 3
 execute if items entity @s weapon.mainhand minecraft:carrot_on_a_stick[custom_data={bomb:1b}] run scoreboard players set @s equip_item 4
 execute if items entity @s weapon.mainhand minecraft:carrot_on_a_stick[custom_data={hose:1b}] run scoreboard players set @s equip_item 5
+execute if items entity @s weapon.mainhand minecraft:carrot_on_a_stick[custom_data={upgrader:1b}] run scoreboard players set @s equip_item 6
 
 scoreboard players set @s[tag=switch,scores={equip_item=0}] equip_time 0
 title @s[tag=switch,scores={equip_item=0}] actionbar [{"text":""}]
@@ -56,6 +57,9 @@ execute as @s[scores={click=1..,action_timer=..0,equip_time=..0,action_cooldown=
 execute as @s[scores={click=1..,action_timer=..0,equip_time=..0,action_cooldown=..0,equip_item=1}] unless items entity @s weapon.mainhand *[damage=25] run scoreboard players set @s action_timer 22
 
 execute as @s[scores={click=1..,action_timer=..0,equip_time=..0,action_cooldown=..0,equip_item=4}] unless items entity @s weapon.mainhand *[damage=25] run function game:player/bomb/trigger
+
+# upgrader
+execute as @s[scores={click=1..,action_timer=..0,equip_time=..0,action_cooldown=..0,equip_item=6}] run function game:player/upgrader/trigger
 
 execute as @s[scores={action_timer=1..}] run function game:player/ui/action_time
 
