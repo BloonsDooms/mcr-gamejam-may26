@@ -66,3 +66,6 @@ scoreboard objectives add hotbar dummy
 scoreboard objectives add hotbar_t dummy
 
 scoreboard objectives add click minecraft.used:minecraft.carrot_on_a_stick
+
+scoreboard objectives add fuel dummy
+scoreboard objectives add fuel_max dummy

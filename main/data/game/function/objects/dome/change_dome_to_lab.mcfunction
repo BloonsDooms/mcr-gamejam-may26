@@ -9,7 +9,7 @@ execute at @n[tag=this,tag=dome,tag=level0] run fill ~-9 ~ ~-9 ~9 ~ ~9 stone rep
 execute at @n[tag=this,tag=dome,tag=level0] run particle explosion_emitter ~ ~3 ~ 0 0 0 1 1 force @a
 execute at @n[tag=this,tag=dome,tag=level0] run summon marker ~3 ~2 ~-4 {Tags:["dome_hookpoints","refinery_input"]}
 execute at @n[tag=this,tag=dome,tag=level0] run summon marker ~4 ~2 ~-3 {Tags:["dome_hookpoints","refinery_output"]}
-execute at @n[tag=this,tag=dome,tag=level0] run summon marker ~-3.5 ~2 ~3.5 {Tags:["dome_hookpoints","charge_station"]}
+execute at @n[tag=this,tag=dome,tag=level0] positioned ~-3.5 ~2 ~3.5 run function game:objects/charge_station/new
 
 
 execute at @n[tag=this,tag=dome,tag=level1] run place template game:domes/dome_1_lab ~-8 ~ ~-8
@@ -18,8 +18,8 @@ execute at @n[tag=this,tag=dome,tag=level1] run particle explosion_emitter ~ ~3 
 execute at @n[tag=this,tag=dome,tag=level1] run summon marker ~4 ~2 ~-5 {Tags:["dome_hookpoints","refinery_input"]}
 execute at @n[tag=this,tag=dome,tag=level1] run summon marker ~5 ~2 ~-4 {Tags:["dome_hookpoints","refinery_output"]}
 execute at @n[tag=this,tag=dome,tag=level1] run summon marker ~4 ~2 ~-5 {Tags:["dome_hookpoints","refinery_input"]}
-execute at @n[tag=this,tag=dome,tag=level1] run summon marker ~-5.5 ~2 ~3.5 {Tags:["dome_hookpoints","charge_station"]}
-execute at @n[tag=this,tag=dome,tag=level1] run summon marker ~-3.5 ~2 ~5.5 {Tags:["dome_hookpoints","charge_station"]}
+execute at @n[tag=this,tag=dome,tag=level1] positioned ~-5.5 ~2 ~3.5 run function game:objects/charge_station/new
+execute at @n[tag=this,tag=dome,tag=level1] positioned ~-3.5 ~2 ~5.5 run function game:objects/charge_station/new
 
 #execute at @n[tag=this,tag=dome,tag=level2] run place template game:domes/dome_3 ~-11 ~ ~-11
 #execute at @n[tag=this,tag=dome,tag=level2] run fill ~-12 ~ ~-12 ~12 ~ ~12 stone replace air
