@@ -1,0 +1,1 @@
+give @p silverfish_spawn_egg[can_place_on=[{blocks:"oak_wood"}],item_name={"italic":false,"text":"Saw"}] 1

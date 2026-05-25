@@ -138,6 +138,9 @@ tag @s remove inside
 execute store result score .y .calc run data get entity @s Pos[1]
 execute if score .y .calc matches ..69 if block ~ 49 ~ gold_block run tag @s add inside
 
+execute positioned -30 68 248 run tag @s[distance=..40] add inside
+execute positioned -30 68 248 run effect give @s[distance=..40] instant_health 1 0 true
+
 scoreboard players remove @s[tag=mask,scores={oxygenT=15..,oxygen=0..}] oxygen 1
 scoreboard players set @s[tag=mask,scores={oxygenT=15..}] oxygenT 0
 
@@ -253,3 +256,5 @@ xp set @s[scores={oxygen=03}] 3 levels
 xp set @s[scores={oxygen=02}] 2 levels
 xp set @s[scores={oxygen=01}] 1 levels
 xp set @s[scores={oxygen=..0}] 0 levels
+
+effect give @s saturation infinite 0 true
