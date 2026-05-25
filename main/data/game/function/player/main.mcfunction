@@ -258,3 +258,5 @@ xp set @s[scores={oxygen=01}] 1 levels
 xp set @s[scores={oxygen=..0}] 0 levels
 
 effect give @s saturation infinite 0 true
+
+execute as @s[scores={lol=1..}] run function game:player/lol

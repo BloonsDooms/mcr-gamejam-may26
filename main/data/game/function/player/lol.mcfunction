@@ -1,5 +1,4 @@
 clear @s
-gamemode adventure @a 
 
 function game:player/give/crossbar
 function game:player/give/mask_t
@@ -11,17 +10,10 @@ function game:player/give/slicer
 function game:player/give/laser
 function game:player/give/bomber
 function game:player/give/boost
+
 give @s golden_apple[item_name={"text":"we didn't finish lol. east this to reset items"}]
 give @s frog_spawn_egg[item_name={"text":"place these in the open to create more domes. these will not reset"},can_place_on=[{blocks:"cherry_wood"}]] 3
-clear @s dirt
 
-tag @s remove mask
-tag @s add inside
+scoreboard players set @s lol 0
 
-scoreboard players set @s oxygen 100
-
-tp @s 286.30 65.00 286.70 45 0
-
-playsound minecraft:music_disc.cat master @s ~ ~ ~ 0.5 1 0.5
-
-scoreboard players set @s boost -100
+effect clear @s minecraft:absorption

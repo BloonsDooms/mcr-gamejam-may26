@@ -5,7 +5,7 @@ tag @n[tag=dome] add this
 kill @e[tag=dome_hookpoints,distance=..13]
 
 execute at @n[tag=this,tag=dome,tag=level0] run place template game:domes/dome_0_lab ~-6 ~ ~-6
-execute at @n[tag=this,tag=dome,tag=level0] run fill ~-9 ~ ~-9 ~9 ~ ~9 stone replace air
+execute at @n[tag=this,tag=dome,tag=level0] run fill ~-9 ~ ~-9 ~9 ~ ~9 cherry_wood replace air
 execute at @n[tag=this,tag=dome,tag=level0] run particle explosion_emitter ~ ~3 ~ 0 0 0 1 1 force @a
 execute at @n[tag=this,tag=dome,tag=level0] run summon marker ~3 ~2 ~-4 {Tags:["dome_hookpoints","refinery_input"]}
 execute at @n[tag=this,tag=dome,tag=level0] run summon marker ~4 ~2 ~-3 {Tags:["dome_hookpoints","refinery_output"]}
@@ -13,7 +13,7 @@ execute at @n[tag=this,tag=dome,tag=level0] positioned ~-3.5 ~2 ~3.5 run functio
 
 
 execute at @n[tag=this,tag=dome,tag=level1] run place template game:domes/dome_1_lab ~-8 ~ ~-8
-execute at @n[tag=this,tag=dome,tag=level1] run fill ~-10 ~ ~-10 ~10 ~ ~10 stone replace air
+execute at @n[tag=this,tag=dome,tag=level1] run fill ~-10 ~ ~-10 ~10 ~ ~10 cherry_wood replace air
 execute at @n[tag=this,tag=dome,tag=level1] run particle explosion_emitter ~ ~3 ~ 0 0 0 1 1 force @a
 execute at @n[tag=this,tag=dome,tag=level1] run summon marker ~4 ~2 ~-5 {Tags:["dome_hookpoints","refinery_input"]}
 execute at @n[tag=this,tag=dome,tag=level1] run summon marker ~5 ~2 ~-4 {Tags:["dome_hookpoints","refinery_output"]}
