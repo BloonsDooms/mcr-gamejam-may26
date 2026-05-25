@@ -134,14 +134,25 @@ scoreboard players remove @s[scores={boost=0..}] boost 1
 
 scoreboard players add @s oxygenT 1
 
+tag @s remove inside
+execute store result score .y .calc run data get entity @s Pos[1]
+execute if score .y .calc matches ..69 if block ~ 49 ~ gold_block run tag @s add inside
+
 scoreboard players remove @s[tag=mask,scores={oxygenT=15..,oxygen=0..}] oxygen 1
 scoreboard players set @s[tag=mask,scores={oxygenT=15..}] oxygenT 0
 
-scoreboard players add @s[tag=!mask,scores={oxygenT=4..,oxygen=..99}] oxygen 1
-scoreboard players set @s[tag=!mask,scores={oxygenT=4..}] oxygenT 0
+scoreboard players remove @s[tag=!inside,tag=!mask,scores={oxygenT=15..,oxygen=0..}] oxygen 1
+scoreboard players set @s[tag=!inside,tag=!mask,scores={oxygenT=15..}] oxygenT 0
+
+scoreboard players add @s[tag=inside,tag=!mask,scores={oxygenT=4..,oxygen=..99}] oxygen 1
+scoreboard players set @s[tag=inside,tag=!mask,scores={oxygenT=4..}] oxygenT 0
+
+scoreboard players set @s[scores={oxygen=..20},tag=inside] oxygen 20
+effect give @s[scores={oxygen=..0}] wither 1 2 true
+effect give @s[tag=!mask,tag=!inside] wither 1 2 true
 
 xp set @s 0 points
-xp set @s[scores={oxygen=100}] 100 levels
+xp set @s[scores={oxygen=100..}] 100 levels
 xp set @s[scores={oxygen=99}] 99 levels
 xp set @s[scores={oxygen=98}] 98 levels
 xp set @s[scores={oxygen=97}] 97 levels
@@ -241,4 +252,4 @@ xp set @s[scores={oxygen=04}] 4 levels
 xp set @s[scores={oxygen=03}] 3 levels
 xp set @s[scores={oxygen=02}] 2 levels
 xp set @s[scores={oxygen=01}] 1 levels
-xp set @s[scores={oxygen=00}] 0 levels
+xp set @s[scores={oxygen=..0}] 0 levels

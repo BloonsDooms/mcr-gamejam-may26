@@ -22,6 +22,8 @@ execute at @e[tag=dome,tag=init,limit=1] run particle explosion_emitter ~ ~3 ~ 0
 
 execute at @n[tag=dome,tag=init] run place template game:domes/dome_0_helper ~-7 ~-15 ~-7
 
+execute at @n[tag=dome,tag=init] unless entity @n[type=villager,distance=..2] run summon villager ~ ~15 ~ {NoAI:1b,active_effects:[{id:invisibility,duration:-1,show_particles:false}],Silent:1b}
+
 function game:objects/dome/connect_neighboring_domes
 
 tag @e remove init

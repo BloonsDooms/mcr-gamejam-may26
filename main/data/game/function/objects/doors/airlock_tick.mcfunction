@@ -4,6 +4,8 @@
 
 # open/close logic
 
+execute unless score @s t1 matches -100..100 run scoreboard players set @s t1 0
+execute unless score @s t2 matches -100..100 run scoreboard players set @s t2 0
 
 execute positioned ^ ^ ^1.5 if entity @p[distance=..4] run tag @s add open_outside
 execute unless entity @s[tag=open_inside_first] positioned ^ ^ ^1.5 if entity @p[distance=..4] run tag @s add open_outside_first

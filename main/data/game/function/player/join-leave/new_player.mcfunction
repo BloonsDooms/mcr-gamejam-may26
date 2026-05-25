@@ -11,3 +11,5 @@ scoreboard players set @s damage_cool 0
 
 scoreboard players set @s oxygen 100
 scoreboard players set @s oxygenT 100
+
+tp @s -31.09 69.00 250.06 -135 0

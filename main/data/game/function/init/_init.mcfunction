@@ -7,3 +7,4 @@ tellraw @a [{text:">> Datapack Version: ",color:"gray"},{storage:"minecraft:game
 function game:init/scoreboard
 function game:init/storage
 function game:init/team
+function game:init/sign

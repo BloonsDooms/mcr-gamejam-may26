@@ -1,0 +1,1 @@
+execute summon interaction run function game:objects/charge_station/init

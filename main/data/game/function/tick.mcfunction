@@ -19,8 +19,10 @@ execute if score .run_game .calc matches 1 run function game:enemy/mold/main
 
 execute as @e[type=zombie] at @s run function game:enemy/zombie/main
 
-
 execute as @e[tag=lab] run function game:objects/lab/lab_tick
+execute as @e[tag=drill] run function game:objects/drill/drill
+
+execute positioned -42 68 260 run scoreboard players set @a[distance=..40] oxygen 100
 
 # get entities matching player.id
 #scoreboard players operation #temp player.id = @s player.id

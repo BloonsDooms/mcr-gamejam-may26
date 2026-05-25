@@ -11,18 +11,18 @@ execute at @s unless block ~ 45 ~ minecraft:emerald_block if block ~ 65 ~ minecr
 # top mold
 
 execute store result score .rand .calc run random value 0..20
-execute at @s if score .rand .calc matches 0..2 positioned ~ 18 ~ if block ~ 18 ~ moss_carpet run setblock ~ 18 ~ minecraft:oak_leaves
-execute at @s if score .rand .calc matches 1..3 positioned ~1 18 ~ if block ~ 18 ~ moss_carpet run setblock ~ 18 ~ minecraft:oak_leaves
-execute at @s if score .rand .calc matches 2..4 positioned ~-1 18 ~ if block ~ 18 ~ moss_carpet run setblock ~ 18 ~ minecraft:oak_leaves
-execute at @s if score .rand .calc matches 3..5 positioned ~ 18 ~1 if block ~ 18 ~ moss_carpet run setblock ~ 18 ~ minecraft:oak_leaves
-execute at @s if score .rand .calc matches 4..6 positioned ~ 18 ~-1 if block ~ 18 ~ moss_carpet run setblock ~ 18 ~ minecraft:oak_leaves
+execute at @s if score .rand .calc matches 0..2 positioned ~ 66 ~ if block ~ 66 ~ moss_carpet run setblock ~ 66 ~ minecraft:oak_leaves
+execute at @s if score .rand .calc matches 1..3 positioned ~1 66 ~ if block ~ 66 ~ moss_carpet run setblock ~ 66 ~ minecraft:oak_leaves
+execute at @s if score .rand .calc matches 2..4 positioned ~-1 66 ~ if block ~ 66 ~ moss_carpet run setblock ~ 66 ~ minecraft:oak_leaves
+execute at @s if score .rand .calc matches 3..5 positioned ~ 66 ~1 if block ~ 66 ~ moss_carpet run setblock ~ 66 ~ minecraft:oak_leaves
+execute at @s if score .rand .calc matches 4..6 positioned ~ 66 ~-1 if block ~ 66 ~ moss_carpet run setblock ~ 66 ~ minecraft:oak_leaves
 
 execute store result score .rand .calc run random value 0..20
-execute at @s if score .rand .calc matches 0..2 positioned ~ 18 ~ if block ~ 65 ~ oak_leaves run setblock ~ 18 ~ minecraft:moss_carpet
-execute at @s if score .rand .calc matches 1..3 positioned ~1 18 ~ if block ~ 65 ~ oak_leaves run setblock ~ 18 ~ minecraft:moss_carpet
-execute at @s if score .rand .calc matches 2..4 positioned ~-1 18 ~ if block ~ 65 ~ oak_leaves run setblock ~ 18 ~ minecraft:moss_carpet
-execute at @s if score .rand .calc matches 3..5 positioned ~ 18 ~1 if block ~ 65 ~ oak_leaves run setblock ~ 18 ~ minecraft:moss_carpet
-execute at @s if score .rand .calc matches 4..6 positioned ~ 18 ~-1 if block ~ 65 ~ oak_leaves run setblock ~ 18 ~ minecraft:moss_carpet
+execute at @s if score .rand .calc matches 0..2 positioned ~ 66 ~ if block ~ 65 ~ oak_leaves run setblock ~ 66 ~ minecraft:moss_carpet
+execute at @s if score .rand .calc matches 1..3 positioned ~1 66 ~ if block ~ 65 ~ oak_leaves run setblock ~ 66 ~ minecraft:moss_carpet
+execute at @s if score .rand .calc matches 2..4 positioned ~-1 66 ~ if block ~ 65 ~ oak_leaves run setblock ~ 66 ~ minecraft:moss_carpet
+execute at @s if score .rand .calc matches 3..5 positioned ~ 66 ~1 if block ~ 65 ~ oak_leaves run setblock ~ 66 ~ minecraft:moss_carpet
+execute at @s if score .rand .calc matches 4..6 positioned ~ 66 ~-1 if block ~ 65 ~ oak_leaves run setblock ~ 66 ~ minecraft:moss_carpet
 
 # leave spread
 execute at @s if block ~ 65 ~ moss_carpet run setblock ~ 65 ~ minecraft:oak_leaves

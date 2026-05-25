@@ -174,5 +174,7 @@ execute as @e[tag=target] at @s facing entity @n[tag=this] feet positioned ^ ^1 
 execute as @e[tag=target] at @s facing entity @n[tag=this] feet positioned ^ ^1 ^13 run rotate @n[tag=door_hookpoint,distance=..2] ~ ~
 #function game:objects/doors/new_door
 
+execute as @e[tag=target] at @s facing entity @n[tag=this] feet positioned ^ ^15 ^13 unless entity @n[type=villager,distance=..2] run summon villager ~ ~ ~ {NoAI:1b,active_effects:[{id:invisibility,duration:-1,show_particles:false}],Silent:1b}
+
 tag @e remove this
 tag @e remove target

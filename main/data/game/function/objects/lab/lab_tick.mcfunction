@@ -1,4 +1,4 @@
-execute at @e[distance=..9,tag=charge_station,type=marker] run function game:objects/lab/charge_station
+execute at @e[distance=..9,tag=charge_station,type=interaction] run function game:objects/charge_station/tick
 
 
 # refinery
@@ -10,6 +10,8 @@ execute at @n[tag=refinery_input] if items block ~ ~ ~ container.2 oak_wood run 
 execute at @n[tag=refinery_input] if items block ~ ~ ~ container.2 green_dye run scoreboard players add @s t2 1
 execute at @n[tag=refinery_input] if items block ~ ~ ~ container.3 oak_wood run scoreboard players add @s t1 1
 execute at @n[tag=refinery_input] if items block ~ ~ ~ container.3 green_dye run scoreboard players add @s t2 1
+
+
 
 #execute at @n[tag=refinery_input] if score @s t1 matches 20.. run data modify storage main macro.slot set from entity @s Items[{id:"minecraft:oak_wood"}].Slot
 #execute at @n[tag=refinery_input] if score @s t1 matches 20.. run function game:objects/lab/remove_item_macro with storage main macro
