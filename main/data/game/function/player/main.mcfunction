@@ -9,7 +9,7 @@ scoreboard players set @s[tag=switch] action_timer 0
 scoreboard players set @s[tag=switch] equip_time 999
 
 # detect held item
-# 1-laser 2-blaster 3-slicer 4-bomber 5-hose 6-upgrader
+# 1-laser 2-blaster 3-slicer 4-bomber 5-hose 6-upgrader 7-mask
 scoreboard players set @s equip_item 0
 execute if items entity @s weapon.mainhand minecraft:carrot_on_a_stick[custom_data={laser:1b}] run scoreboard players set @s equip_item 1
 execute if items entity @s weapon.mainhand minecraft:crossbow run scoreboard players set @s equip_item 2
@@ -17,6 +17,7 @@ execute if items entity @s weapon.mainhand minecraft:carrot_on_a_stick[custom_da
 execute if items entity @s weapon.mainhand minecraft:carrot_on_a_stick[custom_data={bomb:1b}] run scoreboard players set @s equip_item 4
 execute if items entity @s weapon.mainhand minecraft:carrot_on_a_stick[custom_data={hose:1b}] run scoreboard players set @s equip_item 5
 execute if items entity @s weapon.mainhand minecraft:carrot_on_a_stick[custom_data={upgrader:1b}] run scoreboard players set @s equip_item 6
+execute if items entity @s weapon.mainhand minecraft:carrot_on_a_stick[custom_data={mask:1b}] run scoreboard players set @s equip_item 7
 
 scoreboard players set @s[tag=switch,scores={equip_item=0}] equip_time 0
 title @s[tag=switch,scores={equip_item=0}] actionbar [{"text":""}]
@@ -28,11 +29,17 @@ scoreboard players set @s[tag=switch,scores={equip_item=1}] equip_time_max 15
 scoreboard players set @s[tag=switch,scores={equip_item=2}] equip_time 5
 scoreboard players set @s[tag=switch,scores={equip_item=2}] equip_time_max 5
 
+scoreboard players set @s[tag=switch,scores={equip_item=3}] equip_time 15
+scoreboard players set @s[tag=switch,scores={equip_item=3}] equip_time_max 15
+
 scoreboard players set @s[tag=switch,scores={equip_item=4}] equip_time 20
 scoreboard players set @s[tag=switch,scores={equip_item=4}] equip_time_max 20
 
 scoreboard players set @s[tag=switch,scores={equip_item=6}] equip_time 0
 scoreboard players set @s[tag=switch,scores={equip_item=6}] equip_time_max 0
+
+scoreboard players set @s[tag=switch,scores={equip_item=7}] equip_time 0
+scoreboard players set @s[tag=switch,scores={equip_item=7}] equip_time_max 0
 
 #blaster
 execute unless items entity @s weapon.mainhand *[damage=120] run item replace entity @s[scores={equip_item=2,equip_time=..0}] inventory.8 with minecraft:arrow
@@ -58,6 +65,8 @@ execute as @s[scores={equip_time=1..}] run function game:player/ui/equip_time
 # start laser
 execute as @s[scores={click=1..,action_timer=..0,equip_time=..0,action_cooldown=..0,equip_item=1}] unless items entity @s weapon.mainhand *[damage=25] run scoreboard players set @s action_timer_max 22
 execute as @s[scores={click=1..,action_timer=..0,equip_time=..0,action_cooldown=..0,equip_item=1}] unless items entity @s weapon.mainhand *[damage=25] run scoreboard players set @s action_timer 22
+
+execute as @s[scores={click=1..,action_timer=..0,equip_time=..0,action_cooldown=..0,equip_item=3}] unless items entity @s weapon.mainhand *[damage=25] run function game:player/slice/trigger
 
 execute as @s[scores={click=1..,action_timer=..0,equip_time=..0,action_cooldown=..0,equip_item=4}] unless items entity @s weapon.mainhand *[damage=25] run function game:player/bomb/trigger
 
@@ -100,3 +109,22 @@ damage @s[tag=spike,scores={damage_cool=..0}] 3
 scoreboard players remove @s[scores={damage_cool=1..}] damage_cool 1
 scoreboard players set @s[tag=spike,scores={damage_cool=1..}] damage_cool 8
 tag @s remove spike
+
+execute unless entity @s[team=safe] run team join safe
+
+execute as @s[scores={use_boost=1..}] run function game:player/give/boost
+scoreboard players set @s[scores={use_boost=1..}] boost 20
+scoreboard players set @s use_boost 0
+
+effect give @s[scores={boost=20}] levitation 1 6 true
+effect clear @s[scores={boost=17}] levitation
+attribute @s[scores={boost=20}] minecraft:gravity base set -0.4
+attribute @s[scores={boost=14..19}] minecraft:gravity base set -0.1
+attribute @s[scores={boost=12..13}] minecraft:gravity base set -0.05
+attribute @s[scores={boost=9..11}] minecraft:gravity base set 0.0
+attribute @s[scores={boost=7..9}] minecraft:gravity base set 0.02
+attribute @s[scores={boost=5..6}] minecraft:gravity base set 0.04
+attribute @s[scores={boost=2..4}] minecraft:gravity base set 0.06
+attribute @s[scores={boost=..1}] minecraft:gravity base set 0.08
+
+scoreboard players remove @s[scores={boost=0..}] boost 1

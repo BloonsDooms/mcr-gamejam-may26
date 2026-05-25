@@ -1,0 +1,1 @@
+summon zombie ~ ~ ~ {NoAI:1b,Tags:["spawn"],Team:"safe",equipment:{head:{id:"minecraft:zombie_head",count:1}},attributes:[{id:"minecraft:knockback_resistance",base:0.5},{id:"minecraft:follow_range",base:120}],Health:10}

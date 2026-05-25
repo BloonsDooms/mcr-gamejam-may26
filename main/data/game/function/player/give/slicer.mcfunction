@@ -1,0 +1,1 @@
+give @s carrot_on_a_stick[item_model="redstone",custom_data={slicer:1b},item_name={"italic":false,"text":"Slicer (Right-Click)"},attribute_modifiers=[{id:"attack_speed",type:"attack_speed",amount:100,operation:"add_value"}]] 1

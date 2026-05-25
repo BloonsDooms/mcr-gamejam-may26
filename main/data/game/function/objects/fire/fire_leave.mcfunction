@@ -1,8 +1,8 @@
 scoreboard players add @s t1 1
 
-execute if block ~ ~ ~ #minecraft:leaves run scoreboard players set @s[scores={t2=7..},tag=!enough] t1 0
-execute if block ~ ~ ~ #minecraft:leaves as @s[scores={t2=7..},tag=!enough] at @s run playsound minecraft:item.flintandsteel.use master @a ~ ~ ~ 0.6 1.2
-execute if block ~ ~ ~ #minecraft:leaves run tag @s[scores={t2=7..}] add enough
+execute if block ~ ~ ~ #minecraft:leaves run scoreboard players set @s[scores={t2=6..},tag=!enough] t1 0
+execute if block ~ ~ ~ #minecraft:leaves as @s[scores={t2=6..},tag=!enough] at @s run playsound minecraft:item.flintandsteel.use master @a ~ ~ ~ 0.6 1.2
+execute if block ~ ~ ~ #minecraft:leaves run tag @s[scores={t2=6..}] add enough
 
 execute if block ~ ~ ~ #game:hard_fire_start run scoreboard players set @s[scores={t2=30..},tag=!enough] t1 0
 execute if block ~ ~ ~ #game:hard_fire_start as @s[scores={t2=30..},tag=!enough] at @s run particle poof ~ ~1.1 ~ 0.1 0.1 0.1 0.1 10 force

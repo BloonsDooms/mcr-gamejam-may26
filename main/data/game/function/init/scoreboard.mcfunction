@@ -11,6 +11,7 @@ scoreboard objectives add .calc dummy
 scoreboard objectives add .const dummy
 scoreboard players reset * .const 
 scoreboard players set #27 .const 27
+scoreboard players set #90 .const 90
 
 
 ## ID
@@ -55,6 +56,11 @@ scoreboard objectives add action_cooldown dummy
 scoreboard objectives add action_cooldown_max dummy
 
 scoreboard objectives add damage_temp dummy
+
+scoreboard objectives add oxygen dummy
+
+scoreboard objectives add boost dummy
+scoreboard objectives add use_boost minecraft.used:minecraft.brick
 
 scoreboard objectives add hotbar dummy
 scoreboard objectives add hotbar_t dummy

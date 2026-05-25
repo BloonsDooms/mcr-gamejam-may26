@@ -1,0 +1,1 @@
+give @p brick[item_name={"text":"Anti-Gravity (Right-Click)"},use_cooldown={seconds:15,cooldown_group:"boost"},consumable={consume_seconds:0.5,animation:"brush",sound:"entity.breeze.inhale",has_consume_particles:false,on_consume_effects:[{type:"minecraft:play_sound",sound:"ui.toast.out"}]}] 1

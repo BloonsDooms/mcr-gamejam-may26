@@ -35,3 +35,5 @@ execute if items entity @s weapon.mainhand *[damage=12] run item replace entity 
 execute if items entity @s weapon.mainhand *[damage=6] run item replace entity @s weapon.mainhand with carrot_on_a_stick[item_model="gold_ingot",custom_data={bomb:1b},item_name={"italic":false,"text":"Bomber (Right-Click)"},attribute_modifiers=[{id:"attack_speed",type:"attack_speed",amount:100,operation:"add_value"}],damage=12,max_damage=24] 1
 execute if items entity @s weapon.mainhand *[damage=0] run item replace entity @s weapon.mainhand with carrot_on_a_stick[item_model="gold_ingot",custom_data={bomb:1b},item_name={"italic":false,"text":"Bomber (Right-Click)"},attribute_modifiers=[{id:"attack_speed",type:"attack_speed",amount:100,operation:"add_value"}],damage=6,max_damage=24] 1
 
+playsound minecraft:block.bamboo.hit master @a ~ ~ ~ 1 2
+playsound minecraft:block.wool.break master @a ~ ~ ~ 1 0

@@ -40,3 +40,5 @@ execute if items entity @s weapon.mainhand *[damage=110] run scoreboard players 
 execute if items entity @s weapon.mainhand *[damage=120] run scoreboard players set @s damage_temp 12
 
 item replace entity @s inventory.8 with minecraft:stone
+
+playsound minecraft:entity.breeze.jump master @a ~ ~ ~ 1 1.5

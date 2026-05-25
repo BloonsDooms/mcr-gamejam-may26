@@ -1,10 +1,10 @@
 team leave @s[nbt={HurtTime:9s}]
 effect clear @s[nbt={HurtTime:9s}] slowness
 
-execute at @s as @s[team=green] positioned ~ ~5 ~ if entity @e[type=villager,distance=..7] at @s if block ~ ~-1 ~ diamond_block run effect give @s slowness 1 10 true
-execute at @s as @s[team=green] positioned ~ ~5 ~ if entity @e[type=villager,distance=..7] at @s if block ~ ~-1 ~ diamond_block run tp @s ~ ~ ~ facing entity @n[type=villager]
-execute at @s as @s[team=green] positioned ~ ~5 ~ if entity @e[type=villager,distance=..7] at @s if block ~ ~-1 ~ diamond_block run tp @s ~ ~ ~ ~ -10
-execute at @s as @s[team=green] positioned ~ ~5 ~ if entity @e[type=villager,distance=..7] at @s if block ~ ~-1 ~ diamond_block run scoreboard players add @s t1 1
+execute at @s as @s[team=safe] positioned ~ ~5 ~ if entity @e[type=villager,distance=..7] at @s if block ~ ~-1 ~ diamond_block run effect give @s slowness 1 10 true
+execute at @s as @s[team=safe] positioned ~ ~5 ~ if entity @e[type=villager,distance=..7] at @s if block ~ ~-1 ~ diamond_block run tp @s ~ ~ ~ facing entity @n[type=villager]
+execute at @s as @s[team=safe] positioned ~ ~5 ~ if entity @e[type=villager,distance=..7] at @s if block ~ ~-1 ~ diamond_block run tp @s ~ ~ ~ ~ -10
+execute at @s as @s[team=safe] positioned ~ ~5 ~ if entity @e[type=villager,distance=..7] at @s if block ~ ~-1 ~ diamond_block run scoreboard players add @s t1 1
 
 swing @s[scores={t1=16}]
 scoreboard players set @s[scores={t1=16}] t1 0

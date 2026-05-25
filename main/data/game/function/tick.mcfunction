@@ -13,6 +13,7 @@ execute as @e[type=silverfish] at @s run function game:objects/saw/main
 execute as @e[type=frog] at @s run function game:objects/dome/place_dome_spawner
 execute as @e[type=text_display,tag=dome_spawner] at @s run function game:objects/dome/dome_spawner
 execute as @e[type=marker,tag=door] at @s rotated as @s run function game:objects/doors/door_tick
+execute as @e[type=marker,tag=airlock] at @s rotated as @s run function game:objects/doors/airlock_tick
 
 execute if score .run_game .calc matches 1 run function game:enemy/mold/main
 

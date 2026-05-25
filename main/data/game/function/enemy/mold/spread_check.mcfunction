@@ -51,4 +51,4 @@ execute store result score .rand .calc run random value 0..100
 scoreboard players set .min_count .calc 0
 execute as @e[type=zombie] run scoreboard players add .min_count .calc 1
 
-execute if score .amount .calc matches 5.. if score .min_count .calc matches ..20 if score .rand .calc matches 0..50 run summon zombie ~ ~-0.9 ~ {NoAI:1b,Tags:["spawn"],Team:"green",equipment:{head:{id:"minecraft:zombie_head",count:1}},attributes:[{id:"minecraft:follow_range",base:120}]}
+execute if score .amount .calc matches 5.. if score .min_count .calc matches ..20 if score .rand .calc matches 0..50 positioned ~ ~-0.9 ~ run function game:enemy/mold/summon_zombie
