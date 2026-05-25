@@ -51,6 +51,7 @@ scoreboard players operation @n[tag=root,tag=new] t2 = @s t2
 scoreboard players add @n[tag=root,tag=new] t2 1
 
 # stop if near destination
-execute as @n[tag=root,tag=new] at @s if entity @e[type=villager,distance=..2] run tag @n[tag=me] add stop
+execute as @n[tag=root,tag=new] at @s if entity @e[type=villager,distance=..5] run tag @n[tag=me] add stop
+execute as @n[tag=root,tag=new] at @s if block ~ 49 ~ gold_block run tag @n[tag=me] add stop
 
 tag @n[tag=root,tag=new] remove new

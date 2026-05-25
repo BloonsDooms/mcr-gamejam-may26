@@ -24,7 +24,7 @@ execute as @e[tag=drill] run function game:objects/drill/drill
 
 execute positioned -42 68 260 run scoreboard players set @a[distance=..40] oxygen 100
 
-execute positioned 276.61 65.00 275.18 unless entity @a[gamemode=adventure,distance=..100] if score .run_game .calc matches 1 run function game:end
+#execute positioned 276.61 65.00 275.18 unless entity @a[gamemode=adventure,distance=..100] if score .run_game .calc matches 1 run function game:end
 
 # get entities matching player.id
 #scoreboard players operation #temp player.id = @s player.id

@@ -20,5 +20,8 @@ tag @e[tag=root] remove end_root
 
 # grow
 scoreboard players set @s[tag=stop] t1 1
-scoreboard players add @s[scores={t2=..25}] t1 1
-execute as @s[scores={t1=20..}] run function game:enemy/tree/grow
+scoreboard players add @s[scores={t2=..65}] t1 1
+execute as @s[scores={t1=30..},tag=grow3] run function game:enemy/tree/grow
+execute as @s[scores={t1=60..},tag=grow2] run function game:enemy/tree/grow
+execute as @s[scores={t1=80..},tag=grow1] run function game:enemy/tree/grow
+execute as @s[scores={t1=100..}] run function game:enemy/tree/grow
