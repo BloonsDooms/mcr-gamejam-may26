@@ -1,2 +1,1 @@
-scoreboard players add @s t1 1
-execute if score @s t1 matches 100.. on passengers run function game:objects/charge_station/recharge
+execute on passengers if data entity @s item run function game:objects/charge_station/recharge_tick
