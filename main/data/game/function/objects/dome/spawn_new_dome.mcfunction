@@ -15,7 +15,7 @@ execute as @e[tag=dome,tag=init,limit=1] at @s align xyz run tp @s ~.5 ~.5 ~.5
 
 execute at @e[tag=dome,tag=init,limit=1] run place template game:domes/dome_0 ~-6 ~ ~-6
 # fix the ground
-execute at @e[tag=dome,tag=init,limit=1] run fill ~-8 ~ ~-8 ~8 ~ ~8 stone replace air
+execute at @e[tag=dome,tag=init,limit=1] run fill ~-8 ~ ~-8 ~8 ~ ~8 cherry_wood replace air
 
 execute at @e[tag=dome,tag=init,limit=1] run particle explosion_emitter ~ ~3 ~ 0 0 0 1 1 force @a
 

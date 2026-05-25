@@ -130,7 +130,7 @@ attribute @s[scores={boost=5..6}] minecraft:gravity base set 0.04
 attribute @s[scores={boost=2..4}] minecraft:gravity base set 0.06
 attribute @s[scores={boost=..1}] minecraft:gravity base set 0.08
 
-scoreboard players remove @s[scores={boost=0..}] boost 1
+scoreboard players remove @s[scores={boost=-100..}] boost 1
 
 scoreboard players add @s oxygenT 1
 
@@ -152,7 +152,7 @@ scoreboard players set @s[tag=inside,tag=!mask,scores={oxygenT=4..}] oxygenT 0
 
 scoreboard players set @s[scores={oxygen=..20},tag=inside] oxygen 20
 effect give @s[scores={oxygen=..0}] wither 1 2 true
-effect give @s[tag=!mask,tag=!inside] wither 1 2 true
+execute unless entity @s[scores={boost=-20..}] run effect give @s[tag=!mask,tag=!inside] wither 1 2 true
 
 xp set @s 0 points
 xp set @s[scores={oxygen=100..}] 100 levels

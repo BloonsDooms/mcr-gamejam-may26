@@ -4,4 +4,5 @@ scoreboard players add @s t1 1
 
 execute as @s[scores={t1=40..}] at @s positioned ~ ~-1 ~ as @n[tag=root,distance=..0.1] at @s run function game:enemy/tree/root/break
 execute as @s[scores={t1=40..}] at @s run kill @n[tag=saw_dis]
+execute as @s[scores={t1=40..}] at @s run summon item ~ ~1 ~ {Age:-32768,Item:{id:"minecraft:silverfish_spawn_egg",count:1,components:{"minecraft:can_place_on":[{blocks:"oak_wood"}],"minecraft:item_name":{"italic":false,"text":"Saw"}}}}
 kill @s[scores={t1=40..}]
