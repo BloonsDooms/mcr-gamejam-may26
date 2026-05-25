@@ -19,6 +19,9 @@ execute if score .run_game .calc matches 1 run function game:enemy/mold/main
 
 execute as @e[type=zombie] at @s run function game:enemy/zombie/main
 
+
+execute as @e[tag=lab] run function game:objects/lab/lab_tick
+
 # get entities matching player.id
 #scoreboard players operation #temp player.id = @s player.id
 #tag @e[predicate=game:id/matching_player_id] add this

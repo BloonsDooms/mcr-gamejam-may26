@@ -58,6 +58,7 @@ scoreboard objectives add action_cooldown_max dummy
 scoreboard objectives add damage_temp dummy
 
 scoreboard objectives add oxygen dummy
+scoreboard objectives add oxygenT dummy
 
 scoreboard objectives add boost dummy
 scoreboard objectives add use_boost minecraft.used:minecraft.brick

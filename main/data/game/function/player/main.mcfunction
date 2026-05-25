@@ -70,6 +70,9 @@ execute as @s[scores={click=1..,action_timer=..0,equip_time=..0,action_cooldown=
 
 execute as @s[scores={click=1..,action_timer=..0,equip_time=..0,action_cooldown=..0,equip_item=4}] unless items entity @s weapon.mainhand *[damage=25] run function game:player/bomb/trigger
 
+#mask
+execute as @s[scores={click=1..,action_timer=..0,equip_time=..0,action_cooldown=..0,equip_item=7}] run function game:player/maskt
+
 # upgrader
 execute as @s[scores={click=1..,action_timer=..0,equip_time=..0,action_cooldown=..0,equip_item=6}] run function game:player/upgrader/trigger
 
@@ -128,3 +131,114 @@ attribute @s[scores={boost=2..4}] minecraft:gravity base set 0.06
 attribute @s[scores={boost=..1}] minecraft:gravity base set 0.08
 
 scoreboard players remove @s[scores={boost=0..}] boost 1
+
+scoreboard players add @s oxygenT 1
+
+scoreboard players remove @s[tag=mask,scores={oxygenT=15..,oxygen=0..}] oxygen 1
+scoreboard players set @s[tag=mask,scores={oxygenT=15..}] oxygenT 0
+
+scoreboard players add @s[tag=!mask,scores={oxygenT=4..,oxygen=..99}] oxygen 1
+scoreboard players set @s[tag=!mask,scores={oxygenT=4..}] oxygenT 0
+
+xp set @s 0 points
+xp set @s[scores={oxygen=100}] 100 levels
+xp set @s[scores={oxygen=99}] 99 levels
+xp set @s[scores={oxygen=98}] 98 levels
+xp set @s[scores={oxygen=97}] 97 levels
+xp set @s[scores={oxygen=96}] 96 levels
+xp set @s[scores={oxygen=95}] 95 levels
+xp set @s[scores={oxygen=94}] 94 levels
+xp set @s[scores={oxygen=93}] 93 levels
+xp set @s[scores={oxygen=92}] 92 levels
+xp set @s[scores={oxygen=91}] 91 levels
+xp set @s[scores={oxygen=90}] 90 levels
+xp set @s[scores={oxygen=89}] 89 levels
+xp set @s[scores={oxygen=88}] 88 levels
+xp set @s[scores={oxygen=87}] 87 levels
+xp set @s[scores={oxygen=86}] 86 levels
+xp set @s[scores={oxygen=85}] 85 levels
+xp set @s[scores={oxygen=84}] 84 levels
+xp set @s[scores={oxygen=83}] 83 levels
+xp set @s[scores={oxygen=82}] 82 levels
+xp set @s[scores={oxygen=81}] 81 levels
+xp set @s[scores={oxygen=80}] 80 levels
+xp set @s[scores={oxygen=79}] 79 levels
+xp set @s[scores={oxygen=78}] 78 levels
+xp set @s[scores={oxygen=77}] 77 levels
+xp set @s[scores={oxygen=76}] 76 levels
+xp set @s[scores={oxygen=75}] 75 levels
+xp set @s[scores={oxygen=74}] 74 levels
+xp set @s[scores={oxygen=73}] 73 levels
+xp set @s[scores={oxygen=72}] 72 levels
+xp set @s[scores={oxygen=71}] 71 levels
+xp set @s[scores={oxygen=70}] 70 levels
+xp set @s[scores={oxygen=69}] 69 levels
+xp set @s[scores={oxygen=68}] 68 levels
+xp set @s[scores={oxygen=67}] 67 levels
+xp set @s[scores={oxygen=66}] 66 levels
+xp set @s[scores={oxygen=65}] 65 levels
+xp set @s[scores={oxygen=64}] 64 levels
+xp set @s[scores={oxygen=63}] 63 levels
+xp set @s[scores={oxygen=62}] 62 levels
+xp set @s[scores={oxygen=61}] 61 levels
+xp set @s[scores={oxygen=60}] 60 levels
+xp set @s[scores={oxygen=59}] 59 levels
+xp set @s[scores={oxygen=58}] 58 levels
+xp set @s[scores={oxygen=57}] 57 levels
+xp set @s[scores={oxygen=56}] 56 levels
+xp set @s[scores={oxygen=55}] 55 levels
+xp set @s[scores={oxygen=54}] 54 levels
+xp set @s[scores={oxygen=53}] 53 levels
+xp set @s[scores={oxygen=52}] 52 levels
+xp set @s[scores={oxygen=51}] 51 levels
+xp set @s[scores={oxygen=50}] 50 levels
+xp set @s[scores={oxygen=49}] 49 levels
+xp set @s[scores={oxygen=48}] 48 levels
+xp set @s[scores={oxygen=47}] 47 levels
+xp set @s[scores={oxygen=46}] 46 levels
+xp set @s[scores={oxygen=45}] 45 levels
+xp set @s[scores={oxygen=44}] 44 levels
+xp set @s[scores={oxygen=43}] 43 levels
+xp set @s[scores={oxygen=42}] 42 levels
+xp set @s[scores={oxygen=41}] 41 levels
+xp set @s[scores={oxygen=40}] 40 levels
+xp set @s[scores={oxygen=39}] 39 levels
+xp set @s[scores={oxygen=38}] 38 levels
+xp set @s[scores={oxygen=37}] 37 levels
+xp set @s[scores={oxygen=36}] 36 levels
+xp set @s[scores={oxygen=35}] 35 levels
+xp set @s[scores={oxygen=34}] 34 levels
+xp set @s[scores={oxygen=33}] 33 levels
+xp set @s[scores={oxygen=32}] 32 levels
+xp set @s[scores={oxygen=31}] 31 levels
+xp set @s[scores={oxygen=30}] 30 levels
+xp set @s[scores={oxygen=29}] 29 levels
+xp set @s[scores={oxygen=28}] 28 levels
+xp set @s[scores={oxygen=27}] 27 levels
+xp set @s[scores={oxygen=26}] 26 levels
+xp set @s[scores={oxygen=25}] 25 levels
+xp set @s[scores={oxygen=24}] 24 levels
+xp set @s[scores={oxygen=23}] 23 levels
+xp set @s[scores={oxygen=22}] 22 levels
+xp set @s[scores={oxygen=21}] 21 levels
+xp set @s[scores={oxygen=20}] 20 levels
+xp set @s[scores={oxygen=19}] 19 levels
+xp set @s[scores={oxygen=18}] 18 levels
+xp set @s[scores={oxygen=17}] 17 levels
+xp set @s[scores={oxygen=16}] 16 levels
+xp set @s[scores={oxygen=15}] 15 levels
+xp set @s[scores={oxygen=14}] 14 levels
+xp set @s[scores={oxygen=13}] 13 levels
+xp set @s[scores={oxygen=12}] 12 levels
+xp set @s[scores={oxygen=11}] 11 levels
+xp set @s[scores={oxygen=10}] 10 levels
+xp set @s[scores={oxygen=09}] 9 levels
+xp set @s[scores={oxygen=08}] 8 levels
+xp set @s[scores={oxygen=07}] 7 levels
+xp set @s[scores={oxygen=06}] 6 levels
+xp set @s[scores={oxygen=05}] 5 levels
+xp set @s[scores={oxygen=04}] 4 levels
+xp set @s[scores={oxygen=03}] 3 levels
+xp set @s[scores={oxygen=02}] 2 levels
+xp set @s[scores={oxygen=01}] 1 levels
+xp set @s[scores={oxygen=00}] 0 levels

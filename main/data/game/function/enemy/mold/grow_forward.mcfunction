@@ -18,9 +18,9 @@ execute at @s if score .rand .calc matches 1 run tp @s ~ ~ ~ ~-22.5 0
 execute at @s if score .rand .calc matches 2 run tp @s ~ ~ ~ ~45 0
 execute at @s if score .rand .calc matches 3 run tp @s ~ ~ ~ ~22.5 0
 
-execute at @s positioned ~ 17 ~ positioned ^ ^ ^1 if block ~ ~ ~ moss_carpet run setblock ~ ~ ~ oak_leaves
-execute at @s positioned ~ 17 ~ positioned ^ ^ ^2 if block ~ ~ ~ moss_carpet run setblock ~ ~ ~ oak_leaves
-execute at @s positioned ~ 17 ~ positioned ^ ^ ^3 if block ~ ~ ~ moss_carpet run setblock ~ ~ ~ oak_leaves
-execute at @s positioned ~ 17 ~ positioned ^ ^ ^1 if block ~ ~ ~ air run setblock ~ ~ ~ moss_carpet
-execute at @s positioned ~ 17 ~ positioned ^ ^ ^2 if block ~ ~ ~ air run setblock ~ ~ ~ moss_carpet
-execute at @s positioned ~ 17 ~ positioned ^ ^ ^3 if block ~ ~ ~ air run setblock ~ ~ ~ moss_carpet
+execute at @s positioned ~ 65 ~ positioned ^ ^ ^1 if block ~ ~ ~ moss_carpet run setblock ~ ~ ~ oak_leaves
+execute at @s positioned ~ 65 ~ positioned ^ ^ ^2 if block ~ ~ ~ moss_carpet run setblock ~ ~ ~ oak_leaves
+execute at @s positioned ~ 65 ~ positioned ^ ^ ^3 if block ~ ~ ~ moss_carpet run setblock ~ ~ ~ oak_leaves
+execute at @s positioned ~ 65 ~ positioned ^ ^ ^1 if block ~ ~ ~ air run setblock ~ ~ ~ moss_carpet
+execute at @s positioned ~ 65 ~ positioned ^ ^ ^2 if block ~ ~ ~ air run setblock ~ ~ ~ moss_carpet
+execute at @s positioned ~ 65 ~ positioned ^ ^ ^3 if block ~ ~ ~ air run setblock ~ ~ ~ moss_carpet

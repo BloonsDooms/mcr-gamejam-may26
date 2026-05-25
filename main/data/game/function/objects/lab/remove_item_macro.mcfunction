@@ -1,0 +1,1 @@
+$item modify block ~ ~ ~ inventory.$(slot) game:remove_one_item

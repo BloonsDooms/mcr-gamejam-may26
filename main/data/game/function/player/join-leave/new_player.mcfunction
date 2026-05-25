@@ -8,3 +8,6 @@ scoreboard players set @s action_timer 0
 scoreboard players set @s action_cooldown 0
 
 scoreboard players set @s damage_cool 0
+
+scoreboard players set @s oxygen 100
+scoreboard players set @s oxygenT 100

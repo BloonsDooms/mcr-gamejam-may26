@@ -6,9 +6,11 @@ execute at @n[tag=this,tag=dome,tag=level0] run place template game:domes/dome_0
 execute at @n[tag=this,tag=dome,tag=level0] run fill ~-8 ~ ~-8 ~8 ~ ~8 stone replace air
 execute at @n[tag=this,tag=dome,tag=level0] run particle explosion_emitter ~ ~3 ~ 0 0 0 1 1 force @a
 
+
 execute at @n[tag=this,tag=dome,tag=level1] run place template game:domes/dome_1_greenhouse ~-8 ~ ~-8
 execute at @n[tag=this,tag=dome,tag=level1] run fill ~-9 ~ ~-9 ~9 ~ ~9 stone replace air
 execute at @n[tag=this,tag=dome,tag=level1] run particle explosion_emitter ~ ~3 ~ 0 0 0 1 1 force @a
+
 
 execute at @n[tag=this,tag=dome,tag=level2] run place template game:domes/dome_2_greenhouse ~-9 ~ ~-9
 execute at @n[tag=this,tag=dome,tag=level2] run fill ~-10 ~ ~-10 ~10 ~ ~10 stone replace air

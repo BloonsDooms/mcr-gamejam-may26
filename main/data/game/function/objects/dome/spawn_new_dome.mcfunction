@@ -20,6 +20,8 @@ execute at @e[tag=dome,tag=init,limit=1] run fill ~-8 ~ ~-8 ~8 ~ ~8 stone replac
 execute at @e[tag=dome,tag=init,limit=1] run particle explosion_emitter ~ ~3 ~ 0 0 0 1 1 force @a
 
 
+execute at @n[tag=dome,tag=init] run place template game:domes/dome_0_helper ~-7 ~-15 ~-7
+
 function game:objects/dome/connect_neighboring_domes
 
 tag @e remove init
