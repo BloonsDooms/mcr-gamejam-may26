@@ -11,3 +11,10 @@ execute if score .game_time .calc matches 45 positioned 335.54 65.00 266.60 run 
 execute if score .game_time .calc matches 82 positioned 320.72 65.00 228.37 run function game:enemy/tree/spawn
 execute if score .game_time .calc matches 122 positioned 227.41 65.00 325.34 run function game:enemy/tree/spawn
 execute if score .game_time .calc matches 189 positioned 221.46 65.00 226.52 run function game:enemy/tree/spawn
+
+execute if score .game_time .calc matches 400 run tag @e[tag=tree] add grow1
+
+execute if score .game_time .calc matches 800 run tag @e[tag=tree] add thorns
+
+execute if score .game_time .calc matches 1200 run tag @e[tag=tree] add grow2
+execute if score .game_time .calc matches 3600 run tag @e[tag=tree] add grow3

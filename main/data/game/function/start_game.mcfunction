@@ -14,9 +14,9 @@ execute as @a run function game:player/start
 give @a minecraft:carrot_on_a_stick[custom_data={upgrader:1b},item_model="minecraft:netherite_upgrade_smithing_template",item_name=[{text:"Upgrade Wand",italic:false}]]
 
 scoreboard players set .run_game .calc 1
+scoreboard players set .game_time .calc 0
 
-scoreboard players set .game_time .calc 1
-
+function game:enemy/tree/clear
 fill 336 65 210 206 67 343 air replace minecraft:moss_carpet
 fill 336 65 210 206 67 343 air replace minecraft:oak_leaves
 kill @e[type=zombie]
