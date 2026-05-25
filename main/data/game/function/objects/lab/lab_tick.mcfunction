@@ -1,1 +1,1 @@
-execute at @e[distance=..9,tag=charge_station,type=interaction] run function game:objects/charge_station/tick
+execute as @e[distance=..9,tag=charge_station,type=interaction] at @s run function game:objects/charge_station/tick
