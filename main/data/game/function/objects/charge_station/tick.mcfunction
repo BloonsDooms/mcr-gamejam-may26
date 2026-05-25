@@ -1,1 +1,1 @@
-execute on passengers if data entity @s item run function game:objects/charge_station/recharge_tick
+execute if function game:objects/charge_station/was_clicked run function game:objects/charge_station/on_click
