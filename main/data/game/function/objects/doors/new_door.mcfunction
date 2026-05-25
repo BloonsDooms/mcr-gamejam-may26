@@ -1,3 +1,7 @@
+tag @s remove level0
+tag @s add level1
+
+
 # brain for door
 execute align xyz positioned ~0.5 ~ ~0.5 run summon marker ~ ~ ~ {Tags:["init","door"]}
 execute store result score @n[tag=init,tag=door] object.id run scoreboard players add #id object.id 1
